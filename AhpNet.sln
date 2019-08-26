@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhpNet", "AhpNet\AhpNet.csproj", "{5F16442F-CF8D-4430-BD87-9E104A6CD0A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F16442F-CF8D-4430-BD87-9E104A6CD0A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F16442F-CF8D-4430-BD87-9E104A6CD0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F16442F-CF8D-4430-BD87-9E104A6CD0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F16442F-CF8D-4430-BD87-9E104A6CD0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A03E5EF8-D59A-46B0-9DC9-EA4701E15586}
+	EndGlobalSection
+EndGlobal
