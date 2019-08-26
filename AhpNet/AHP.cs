@@ -44,14 +44,5 @@ namespace AhpNet
 
             return wea * wpe;
         }
-
-        /// <summary>
-        /// Test Method for DLL debugging
-        /// </summary>
-        /// <returns></returns>
-        public static string HelloLibrary()
-        {
-            return "Hello World.";
-        }
     }
 }
