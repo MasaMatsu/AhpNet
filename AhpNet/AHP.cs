@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using MathNet.Numerics.LinearAlgebra;
 
 namespace AhpNet
@@ -19,6 +20,14 @@ namespace AhpNet
         public IEnumerable<Matrix<T>> MPCEAs { get; private set; }
 
         #endregion
+
+        public AHP(Matrix<T> mpcpe, IEnumerable<Matrix<T>> mpceas)
+        {
+            // TODO: Validate arguments.
+
+            MPCPE = mpcpe;
+            MPCEAs = mpceas;
+        }
 
         /// <summary>
         /// Test Method for DLL debugging
