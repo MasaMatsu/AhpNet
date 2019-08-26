@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhpNet", "AhpNet\AhpNet.csproj", "{5F16442F-CF8D-4430-BD87-9E104A6CD0A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhpNetTest", "AhpNetTest\AhpNetTest.csproj", "{22F29D5F-66B8-4EB4-88EC-3379B5A86DF8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F16442F-CF8D-4430-BD87-9E104A6CD0A4} = {5F16442F-CF8D-4430-BD87-9E104A6CD0A4}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{5F16442F-CF8D-4430-BD87-9E104A6CD0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F16442F-CF8D-4430-BD87-9E104A6CD0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F16442F-CF8D-4430-BD87-9E104A6CD0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22F29D5F-66B8-4EB4-88EC-3379B5A86DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22F29D5F-66B8-4EB4-88EC-3379B5A86DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22F29D5F-66B8-4EB4-88EC-3379B5A86DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22F29D5F-66B8-4EB4-88EC-3379B5A86DF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
