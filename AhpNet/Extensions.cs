@@ -22,7 +22,8 @@ namespace AhpNet
                 .OrderByDescending(x => x.Value)
                 .First();
             var maxEigenVector = eigen.EigenVectors.Column(maxEigenValueIndexed.Index);
-            return (maxEigenValueIndexed.Value, maxEigenVector);
+
+            return (maxEigenValueIndexed.Value, maxEigenVector.Divide(maxEigenVector.Sum()));
         }
 
         /// <summary>
