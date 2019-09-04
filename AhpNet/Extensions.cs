@@ -7,6 +7,18 @@ namespace AhpNet
 {
     public static class Extensions
     {
+        #region Vector<T>
+
+        /// <summary>
+        /// Math.Sum(vector.Enumerate()) = 1
+        /// </summary>
+        public static Vector<T> FitToOne<T>(this Vector<T> vector) where T : struct, IEquatable<T>, IFormattable
+        {
+            return vector.Divide(vector.Sum());
+        }
+
+        #endregion
+
         #region Matrix<T>
 
         /// <summary>
@@ -23,7 +35,7 @@ namespace AhpNet
                 .First();
             var maxEigenVector = eigen.EigenVectors.Column(maxEigenValueIndexed.Index);
 
-            return (maxEigenValueIndexed.Value, maxEigenVector.Divide(maxEigenVector.Sum()));
+            return (maxEigenValueIndexed.Value, maxEigenVector.FitToOne());
         }
 
         /// <summary>
