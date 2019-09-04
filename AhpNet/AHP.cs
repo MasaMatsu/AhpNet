@@ -23,10 +23,28 @@ namespace AhpNet
 
         public AHP(Matrix<T> mpcpe, IEnumerable<Matrix<T>> mpceas)
         {
-            // TODO: Validate arguments.
+            var errors = new List<string>();
+            if (ValidateMatrixes(errors, mpcpe, mpceas))
+                throw new InvalidOperationException(String.Join("¥n", errors));
 
             MPCPE = mpcpe;
             MPCEAs = mpceas;
+        }
+
+        private bool ValidateMatrixes(List<string> errors, Matrix<T> mpcpe, IEnumerable<Matrix<T>> mpceas)
+        {
+            var oldCount = errors.Count;
+
+            foreach (var matrix in mpceas.Concat(new[] {mpcpe}))
+            {
+                if (matrix.ColumnCount != matrix.RowCount)
+                    errors.Add($"The matrix must be a diagonal matrix.");
+            }
+
+            if (MPCPE.ColumnCount != MPCEAs.Count())
+                errors.Add("The number of evaluations does not match.");
+
+            return oldCount == errors.Count;
         }
 
         public Vector<T> Result() // The weight of Problem-Evaluations
